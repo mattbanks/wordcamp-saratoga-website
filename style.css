@@ -1,8 +1,16 @@
+@import  "http://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
+@import  "http://fonts.googleapis.com/css?family=Tauri";
+
+/**
+ * Light Link Color: #0C67A4
+ * Dark Link COlor:  #0B5A8F
+ */
+
 /* WordCamp Saratoga 2014 Styles */
 
-@import "http://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
-
-@import "http://fonts.googleapis.com/css?family=Tauri";
+body {
+	background-size: cover;
+}
 
 body.admin-bar {
 	background-position: center 32px;
@@ -10,6 +18,7 @@ body.admin-bar {
 
 #secondary {
 	width: 0;
+	display: none !important;
 }
 
 body,button,input,select,textarea,.comment-reply-title,.comments-title {
@@ -22,11 +31,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a,.widget a,.content-sidebar .widget a {
-	color: #08bbd1;
+	color: #0C67A4;
 }
 
 a:hover,.widget a:hover,.content-sidebar .widget a:hover {
-	color: #1ca574;
+	color: #0B5A8F;
+/*text-decoration: underline;*/
+/* Come back to this, i want to underline on hover in everything but the menu bar */
 }
 
 iframe {
@@ -54,11 +65,13 @@ iframe {
 }
 
 ::selection {
-	background: #08bbd1;
+	background: #0B5A8F;
+	color: #FFF;
 }
 
 ::-moz-selection {
-	background: #08bbd1;
+	background: #0B5A8F;
+	color: #FFF;
 }
 
 .site-header {
@@ -67,18 +80,26 @@ iframe {
 	top: 0;
 }
 
+#site-header {
+	top: 66px;
+}
+
 .admin-bar .site-header {
 	top: 32px;
 }
 
+.site-footer {
+	background-color: rgba(0,0,0,0.0) !important;
+}
+
 .primary-navigation li:hover > a,.primary-navigation li.focus > a {
-	background-color: #08BBD1;
+	background-color: #0C67A4;
 }
 
 .site-navigation .current_page_item > a,.site-navigation .current_page_ancestor > a,.site-navigation .current-menu-item > a,.site-navigation .current-menu-ancestor > a {
 	color: #fff;
 	font-weight: 700;
-	background: #08BBD1;
+	background: #0C67A4;
 }
 
 .site-navigation .current_page_item > a:hover,.site-navigation .current_page_ancestor > a:hover,.site-navigation .current-menu-item > a:hover,.site-navigation .current-menu-ancestor > a:hover {
@@ -101,7 +122,7 @@ iframe {
 }
 
 #menu-item-42716 a {
-	color: #6adfef;
+	color: #0B5A8F;
 	font-size: 1.2em;
 	font-weight: 600;
 }
@@ -115,16 +136,16 @@ iframe {
 }
 
 .site-navigation .sub-menu a:hover,.site-navigation .sub-menu li.focus > a {
-	background-color: #6adfef;
+	background-color: #0B5A8F;
 }
 
 .primary-navigation ul ul {
-	background: #08bbd1;
+	background: #0B5A8F;
 }
 
 #main {
 	background: #fff;
-	border-top: 4px solid #08bbd1;
+	background: rgba(255,255,255,0.7);
 }
 
 .masthead-fixed .site-main {
@@ -132,22 +153,31 @@ iframe {
 }
 
 #primary {
-	margin: 40px 0 0;
+	margin: 62px 0 0;
 	padding: 0;
 	width: 66.667%;
 }
 
 .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.page-content {
 	max-width: 80%;
+	background: none !important;
 }
 
 .site-content {
-	margin: 0!important;
+	margin: 0 !important;
+}
+
+.site-content .entry-meta {
+	background: none !important;
 }
 
 #content-sidebar {
-	margin: 0;
+	margin: 50px 0 0;
 	width: 33.333%;
+}
+
+article {
+	background-color: none;
 }
 
 .post-thumbnail {
@@ -161,21 +191,22 @@ iframe {
 }
 
 .content-sidebar .widget {
-	background: #f9f9f9;
-	border-top: 1px solid #08BBD1;
+	background: rgba(255,255,255,0.7);
+	border-top: 1px solid #0B5A8F;
 	padding: 0 7% 7%;
 	width: 86%;
 }
 
 .content-sidebar .widget .widget-title {
 	border: none;
-	color: #08BBD1;
+	color: #0B5A8F;
 	font-size: 18px;
-	font-weight: 400;
-	line-height: 1.3em;
+	font-weight: 700;
+	line-height: 1.2em;
 	margin: 0;
 	padding: 0;
 	position: relative;
+	text-align: center;
 	top: -19px;
 }
 
@@ -194,7 +225,7 @@ iframe {
 }
 
 .featured-content-inner article {
-	background: #08bbd1;
+	background: #0B5A8F;
 }
 
 .featured-content-inner article:hover,.featured-content-inner article:nth-child(2):hover {
@@ -202,7 +233,7 @@ iframe {
 }
 
 .featured-content-inner article:nth-child(2) {
-	background: #6adfef;
+	background: #0B5A8F;
 }
 
 .featured-content .post-thumbnail {
@@ -246,6 +277,10 @@ iframe {
 	font-size: 1.75em;
 }
 
+.entry-title a:hover {
+	color: #0B5A8F !important;
+}
+
 .grid .featured-content .entry-header:after {
 	font-size: .75em;
 	position: relative;
@@ -253,7 +288,7 @@ iframe {
 }
 
 .grid .featured-content .post-31082 .entry-header:after {
-	content: "Help power WCNYC";
+	content: "Help power WC Saratoga";
 }
 
 .grid .featured-content .post-31091 .entry-header:after {
@@ -265,7 +300,7 @@ iframe {
 }
 
 .grid .featured-content .post-31093 .entry-header:after {
-	content: "Help make WCNYC an awesome event";
+	content: "Help make WC Saratoga an awesome event";
 }
 
 .grid .featured-content .post-104185 .entry-header:after {
@@ -286,31 +321,31 @@ iframe {
 }
 
 input[type="button"],input[type="reset"],input[type="submit"],.widget input[type="button"],.widget input[type="reset"],.widget input[type="submit"] {
-	background-color: #1ca574 !important;
+	background-color: #0B5A8F !important;
 }
 
 input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.widget input[type="button"]:hover,.widget input[type="reset"]:hover,.widget input[type="submit"]:hover {
-	background-color: #3ecf9e !important;
+	background-color: #0B5A8F !important;
 }
 
 .action-button {
 	font-size: 1.5em;
-	background-color: #08bbd1;
+	background-color: #0B5A8F;
 	text-decoration: none !important;
 	color: #fff !important;
 	border-radius: 2px;
 	padding: .5em 1em;
-	margin: 1em 0!important;
+	margin: 1em 0 !important;
 	text-transform: uppercase;
 }
 
 .action-button:hover {
-	background-color: #6adfef;
+	background-color: #0B5A8F;
 	color: #fff !important;
 }
 
 .wcorg-organizer {
-	border-bottom: 1px solid #f5f5f5;
+	border-bottom: 1px solid #0B5A8F;
 	padding-top: 20px;
 	min-height: 170px;
 }
@@ -326,12 +361,12 @@ input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,
 	font-size: 1.5em;
 	font-weight: 700;
 	color: #fff;
-	background-color: #1ca574;
+	background-color: #0B5A8F;
 	border-radius: 2px;
-	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #1ca574;
+/* box-shadow: 0 0 0 3px #fff, 0 0 0 5px #1ca574; */
 	padding: .375em;
 	display: inline-block;
-	margin: 1em 0!important;
+	margin: 1em 0 !important;
 }
 
 #content-sidebar .sponsor-level-title {
@@ -521,7 +556,7 @@ span.mta-bullet {
 	}
 
 	.site-navigation .sub-menu a:hover,.site-navigation .sub-menu li.focus > a {
-		background-color: #08BBD1;
+		background-color: #0B5A8F;
 	}
 
 	#menu-item-42716 {
@@ -540,6 +575,6 @@ span.mta-bullet {
 @media only screen and (max-width: 400px) {
 	#page {
 		width: 98.5% !important;
-		margin: 0 auto!important;
+		margin: 0 auto !important;
 	}
 }
